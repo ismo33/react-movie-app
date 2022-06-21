@@ -1,0 +1,10 @@
+.movielist{
+    display: flex;
+    padding: 70px 0;
+    height: 900px;
+    flex-wrap:wrap;
+    align-items: center;
+    max-height: 100%;
+    background-color: rgb(101, 106, 110);
+}
+

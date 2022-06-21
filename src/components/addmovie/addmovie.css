@@ -1,0 +1,29 @@
+
+.addmovie{
+    padding: 70px 0;
+    height: 900px;
+    background-color: rgb(101, 106, 110);
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    
+}
+.form{
+    display: flex;
+    flex-direction: column;
+     margin: 0;
+     width: 50rem;
+     height:33rem ;
+     margin-top: 50px;
+     font-size: 1.5rem;
+   
+    
+}
+h3{
+    position: absolute;
+}
+.button{
+    margin: 20px;
+    width: 100px;
+
+}

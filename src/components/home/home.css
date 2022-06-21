@@ -1,0 +1,7 @@
+.home{
+    height: 657px;
+    background: url('/src/background.jpg');
+    background-position: center;
+    background-size: cover ;
+    background-repeat: no-repeat;
+}

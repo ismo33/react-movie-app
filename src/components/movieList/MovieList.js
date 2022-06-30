@@ -1,9 +1,11 @@
 import './movieList.css'
 import MovieCard from '../moviecard/MovieCard';
 
+
 const MovieList = ({movies,searchMovie}) => {
-    const sortedMovies=movies.filter((val)=>{
-        return (val.title.toLowerCase().includes(searchMovie.toLowerCase()))
+   
+     const sortedMovies=movies.filter((val)=>{
+         return (val.title.toLowerCase().includes(searchMovie.toLowerCase()))
         })
     return (
         <div className="movielist">

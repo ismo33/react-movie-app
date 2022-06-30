@@ -1,7 +1,11 @@
 import './moviecard.css';
-import {Card} from 'react-bootstrap';
+import {Card,Button} from 'react-bootstrap';
 import ReactStars from 'react-stars';
+import { Link} from 'react-router-dom';
+
+// import { Link,Route,Routes} from 'react-router-dom';
 const MovieCard = ({title,desc,rate,image,year}) => {
+    
     return (
         <div className='movie-card' >
             <Card  className='row'>
@@ -17,6 +21,12 @@ const MovieCard = ({title,desc,rate,image,year}) => {
                 <h6>Realease : {year}</h6>
                 <h2>Overview :</h2>
                 <p>{desc}</p>
+                <Button variant='light' className='btn'>
+                    <Link to={`/moviedetails/${title}`} className="details">Show details</Link>
+                </Button>
+                
+                    
+               
            </div>
               </div>  
            </Card>

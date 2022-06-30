@@ -9,17 +9,22 @@ const AddMovie = ({addNewMovie}) => {
     const [year,setYear]=useState('');
     const [image,setImage]=useState('');
     const [rate,setRate]=useState('');
+    const [trailer,setTrailer]=useState('');
 
     const handleNewMovie=(e) =>{
         e.preventDefault();
-        const movie={title,desc,year,image,rate};
+        const movie={title,desc,year,image,trailer,rate};
         if(
             title==='' ||
             desc==='' ||
             year==='' ||
-            image===''
-        ) return alert("Missing fields");
-        if(rate<0) return alert("rate must be positif")
+            image==='' ||
+            trailer===''
+        ) 
+        return alert("Missing fields");
+
+        if(rate<0) 
+        return alert("rate must be positif")
         addNewMovie(movie);
         setTitle('');
         setDesc('');
@@ -28,7 +33,7 @@ const AddMovie = ({addNewMovie}) => {
         setRate('');
         alert("succes")
     }
-    
+
     return (
         <div className="addmovie">
             <h3>Add a movie</h3>
@@ -64,6 +69,13 @@ const AddMovie = ({addNewMovie}) => {
                      onChange={(e) => setImage(e.target.value)} />
                 </Form.Group>
                 <Form.Group>
+                    <Form.Label>Trailer</Form.Label>
+                    <Form.Control  
+                     placeholder="Trailer link "
+                     value={trailer}
+                     onChange={(e) => setTrailer(e.target.value)} />
+                </Form.Group>
+                <Form.Group>
                     <Form.Label>Rate</Form.Label>
                   
                     <Form.Control 
@@ -80,3 +92,7 @@ const AddMovie = ({addNewMovie}) => {
 };
 
 export default AddMovie;
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/2tc-RPjZRm8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
